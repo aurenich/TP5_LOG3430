@@ -27,7 +27,6 @@ jobs:
     - name: Run Locust tests
       run: |
         locust -f locustfile.py --headless --users 10000 --spawn-rate 100 --host=http://127.0.0.1:5000 --run-time 2m
-
-    - name: Stop Flask server
-      run: |
-        kill $(lsof -t -i:5000)
+    # - name: Stop Flask server
+    #   run: |
+    #     kill $(lsof -t -i:5000)
